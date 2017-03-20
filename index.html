@@ -7,21 +7,25 @@
 </head>
 <body>
 	<div id="bio"></div>
-	<textarea id="text-input" oninput="this.editor.update()"rows="6" cols="60">Type **Markdown** here.</textarea>
-	<div id="preview"> </div>
+	<button id="translate">Français/English</button>
+
 	<script src="markdown.js"></script>
 	<script src="data/bio.js"></script>
 	<script>
-	function Editor(input, preview) {
-		this.update = function () {
-			preview.innerHTML = markdown.toHTML(input.value);
-		};
-		input.editor = this;
-		this.update();
+	//affichage du contenu
+	var lang = "fr";
+	var txt = document.getElementById("bio");
+	
+	function disp(lang) {
+		txt.innerHTML = markdown.toHTML(bio[lang]);
 	}
-	var $ = function (id) { return document.getElementById(id); };
-	new Editor($("text-input"), $("preview"));
-	$("bio").innerHTML = markdown.toHTML(bioData.fr);
+
+	document.getElementById("translate").addEventListener("click", function () {
+		lang = (lang === "fr") ? "en" : "fr";
+		disp(lang);
+	});
+
+	disp(lang);
 	</script>
 </body>
 </html>
