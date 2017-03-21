@@ -1,4 +1,5 @@
-bio = {
+data.bio = {
+nav:{fr:"Bio", en:"Bio"},
 fr:`
 ## Bio
 
@@ -18,7 +19,6 @@ L’algorithmique est l’aspect de l’informatique qui m’attire le plus aujo
 [mes réalisations](https://github.com/ribacq), je suis à la recherche de nouvelles
 connaissances et, surtout, d’expérience.
 `,
-
 en:`
 ## Bio
 

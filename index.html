@@ -3,40 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css"/>
-	<title>Quentin RIBAC</title>
+	<title>Quentin RIBAC — étudiant et développeur</title>
 </head>
 <body>
-	<header><h1>Quentin RIBAC</h1></header>
+	<header id="top"><h1><a href="#">Quentin RIBAC</a></h1></header>
 
-	<nav>
-		<aside>
-			<button id="translate">Français/English</button>
-		</aside>
-	</nav>
+	<aside>
+		<a id="translate" href="#"></a>
+		<a href="mailto:ribac.quentin@gmail.com">Email</a>
+		<nav></nav>
+	</aside>
 
-	<section>
-		<article id="bio"></article>
-	</section>
+	<section></section>
 
 	<!-- js includes and code -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="markdown.js"></script>
+	<script>data = {};</script>
 	<script src="data/bio.js"></script>
-	<script>
-	//affichage du contenu
-	var lang = "fr";
-	var txt = document.getElementById("bio");
-	
-	function disp(lang) {
-		txt.innerHTML = markdown.toHTML(bio[lang]);
-	}
-
-	document.getElementById("translate").addEventListener("click", function () {
-		lang = (lang === "fr") ? "en" : "fr";
-		disp(lang);
-	});
-
-	disp(lang);
-	</script>
+	<script src="data/projects.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
 

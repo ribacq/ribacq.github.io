@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Share+Tech+Mono');
+
 body{
 	margin: 0;
 	padding: 0;
@@ -6,17 +8,26 @@ body{
 	color:#444;
 	position: relative;
 	max-width: 100%;
+	font-family: Cantarell, sans-serif;
 }
 
 section{
 	margin-left: 200px;
 	max-width:650px;
+}
+
+article{
 	padding:0 10px;
 	border-left: 2px solid #444;
 }
 
 h1,h2,h3{
 	line-height:1.2;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+h1:hover::after, h2:hover::after, h3:hover::after{
+	content: '_';
 }
 
 header{
@@ -28,18 +39,36 @@ header{
 	padding: 0 10px;
 }
 
+header h1 a{
+	color: #FFF;
+	text-decoration: none;
+}
+
 header h1{
 	margin: 0;
 }
 
-nav{
+aside{
 	position: absolute;
 	left: 0;
 	top: 3em;
-	max-width: 200px;
+	width: 150px;
 	background: #444;
 	color: #FFF;
 	padding: 0 10px;
 	height: 100%;
+}
+
+aside a{
+	display:block;
+	color: #FFF;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+aside a:hover{
+	color: #444;
+	background: #FFF;
 }
 
