@@ -10,12 +10,13 @@ var content = $("section")[0];
 var names = ["bio", "projects"];
 
 names.forEach(function (name) {
-	menu.innerHTML += '<a href="#' + name + '">' + data[name].nav[lang] + '</a>';
+	menu.innerHTML += '<a href="#' + name + '"></a>';
 	content.innerHTML += '<article id="' + name + '"></article>';
 });
 
 //display function
 function display(name) {
+	$('nav [href="#' + name + '"]')[0].innerHTML = data[name].nav[lang];
 	$("#" + name)[0].innerHTML = markdown.toHTML(data[name][lang]);
 }
 
