@@ -2,6 +2,7 @@
 var lang = "fr";
 
 //page structure
+var tslLink = $("#translate")[0];
 var menu = $("nav")[0];
 var content = $("section")[0];
 
@@ -22,9 +23,10 @@ function display(name) {
 names.forEach(display);
 
 //translate button
-var tslLink = $("#translate")[0];
+tslLink.href = "#en";
 tslLink.innerText = "View in English";
 tslLink.addEventListener("click", function () {
+	this.href = '#' + lang;
 	lang = (lang === "fr") ? "en" : "fr";
 	this.innerText = (lang === "fr") ? "View in English" : "Voir en français";
 	names.forEach(display);

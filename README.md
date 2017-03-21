@@ -1,5 +1,7 @@
 # ribacq.github.io
 
+--> [ribacq.github.io](https://ribacq.github.io)
+
 ## Français
 Ce site web est une présentation de moi-même, Quentin RIBAC, étudiant français en informatique, et
 de mes projets. Il est destiné à être parcouru rapidement, bilingue en français et anglais, et de
@@ -14,5 +16,5 @@ programming, natural, or constructed languages.
 
 ## Technologies
 * HTML5/CSS3
-* JS?
+* JS (with JQuery)
 
