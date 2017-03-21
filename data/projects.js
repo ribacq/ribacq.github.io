@@ -3,22 +3,61 @@ nav:{fr:"Projets", en:"Projects"},
 fr:`
 ## Projets
 
-### En C
-### En Java
-### En Python
-### En Bash
-### En web
-### En LaTeX
-### etc.
+### C
+
+* ltl
+* chinese_checkers
+
+### Java
+
+* bientôt en cours le projet de S2
+
+### Python
+
+* utaxc
+
+### Bash
+
+* bash-misc
+
+### Web
+
+* ce site
+
+### LaTeX
+
+* jipkg
+* WMWT
+* La grammaire du Deẽreẽ
 `,
 en:`
 ## Projects
 
-### In C
-### In Java
-### In Python
-### In Bash
+### C
+
+* ltl
+* chinese_checkers
+
+### Java
+
+* soon our spring semester project
+
+### Python
+
+* utaxc
+
+### Bash
+
+* bash-misc
+
 ### Web technologies
-### In LaTeX
+
+* this very website
+
+### LaTeX
+
+* jipkg
+* WMWT
+* Deẽreẽ grammar
 `
 };

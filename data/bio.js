@@ -29,7 +29,7 @@ I am currently a student in first year of a « DUT Informatique », a
 two-year Computing Sciences diploma, at the **IUT of Lannion** (Brittany), and intend to continue
 with my studies into a three-year engineering school afterwards.
 
-In my life as in personal life, I value **rigor**,
+In my work as in personal life, I value **rigor**,
 **originality**, **clarity**, and to a certain
 extent **minimalism**. I’m applying this through the use of
 some tools like the text editor *VI*, the *dwm* windows

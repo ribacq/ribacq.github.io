@@ -3,7 +3,7 @@ var lang = "fr";
 
 //page structure
 var tslLink = $("#translate")[0];
-var menu = $("nav")[0];
+var menu = $("nav #datamenu")[0];
 var content = $("section")[0];
 
 //content list
