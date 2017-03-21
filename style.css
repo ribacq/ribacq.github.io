@@ -26,7 +26,7 @@ h1,h2,h3{
 	font-family: 'Share Tech Mono', monospace;
 }
 
-h1:hover::after, h2:hover::after, h3:hover::after{
+h1:hover a::after, article:hover h2::after{
 	content: '_';
 }
 
@@ -42,6 +42,7 @@ header{
 header h1 a{
 	color: #FFF;
 	text-decoration: none;
+	display: block;
 }
 
 header h1{
@@ -63,12 +64,30 @@ aside a{
 	display:block;
 	color: #FFF;
 	text-decoration: none;
-	border-radius: 5px;
 	padding: 5px;
+	border-bottom: 1px solid #088;
+}
+
+aside a::before{
+	content: '§ ';
+	color: #444;
 }
 
 aside a:hover{
 	color: #444;
 	background: #FFF;
+	border-radius: 5px;
 }
 
+aside a:hover::before{
+	color: #088;
+}
+
+p:hover::after{
+	content: '¶';
+	color: #088;
+}
+
+section a:link{
+	color: #088;
+}
