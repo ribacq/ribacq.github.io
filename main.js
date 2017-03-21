@@ -33,3 +33,9 @@ tslLink.addEventListener("click", function () {
 	names.forEach(display);
 });
 
+//footer button animation
+$('footer a').click(function () {
+		$('html, body').animate({
+			scrollTop:0
+		});
+});
