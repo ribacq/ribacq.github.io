@@ -1,6 +1,6 @@
 bio = {
 fr:`
-# Quentin RIBAC
+## Bio
 
 Utilisateur de GNU/Linux depuis que j’ai 14 ans, je suis aujourd’hui un utilisateur
 avancé de ce système d’exploitation et passionné de programmation.
@@ -20,7 +20,7 @@ connaissances et, surtout, d’expérience.
 `,
 
 en:`
-# Quentin RIBAC
+## Bio
 
 GNU/Linux user since I am 14, I today am an advanced user of this
 operating system, and passioned with programming.
