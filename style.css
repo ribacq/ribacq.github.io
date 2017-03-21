@@ -110,3 +110,8 @@ p:hover::after{
 section a:link{
 	color: #088;
 }
+
+article img{
+	max-width: 300px;
+	max-height: 300px;
+}
