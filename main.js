@@ -2,35 +2,31 @@
 var lang = "fr";
 
 //page structure
-var tslLink = $("#translate")[0];
 var menu = $("nav #datamenu")[0];
 var content = $("section")[0];
-
-//content list
-var names = ["bio", "projects"];
-
-names.forEach(function (name) {
-	menu.innerHTML += '<a href="#' + name + '"></a>';
-	content.innerHTML += '<article id="' + name + '"></article>';
-});
 
 //display function
 function display(name) {
 	$('nav [href="#' + name + '"]')[0].innerHTML = data[name].nav[lang];
-	$("#" + name)[0].innerHTML = markdown.toHTML(data[name][lang]);
+	$("#" + name)[0].innerHTML = markdown.toHTML(data[name][lang], 'Maruku');
 }
 
 //calls
-names.forEach(display);
+for (name in data) {
+	menu.innerHTML += '<a href="#' + name + '"></a>';
+	content.innerHTML += '<article id="' + name + '"></article>';
+	display(name);
+}
 
 //translate button
-tslLink.href = "#en";
-tslLink.innerText = "View in English";
-tslLink.addEventListener("click", function () {
-	this.href = '#' + lang;
+var tslLink = $('a[href="#translate"]');
+tslLink[0].innerText = "View in English";
+tslLink.click(function () {
 	lang = (lang === "fr") ? "en" : "fr";
 	this.innerText = (lang === "fr") ? "View in English" : "Voir en français";
-	names.forEach(display);
+	for (name in data) {
+		display(name);
+	}
 });
 
 //footer button animation
@@ -39,3 +35,12 @@ $('footer a').click(function () {
 		scrollTop: 0
 	});
 });
+
+$(window).scroll(function () {
+	if ($(window).scrollTop() > 50) {
+		$('nav').css({'position': 'fixed', 'top': 0});
+	} else {
+		$('nav').css({'position': 'relative'});
+	}
+});
+
