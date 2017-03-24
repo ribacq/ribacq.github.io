@@ -1,14 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Cantarell|Share+Tech+Mono');
+/*@import url('https://fonts.googleapis.com/css?family=Cantarell|Share+Tech+Mono');*/
 
+/* big parts */
 body{
 	margin: 0;
 	padding: 0;
+	position: relative;
 	line-height:1.6;
 	font-size:18px;
 	color:#444;
-	position: relative;
-	max-width: 100%;
 	font-family: Cantarell, sans-serif;
+}
+
+header{
+	background: #444;
+	color: #FFF;
+	height: 50px;
+	margin: 0;
+	padding: 0 10px;
+	border-bottom: 2px solid #088;
+}
+
+header h1{
+	margin: 0;
+}
+
+header h1 a{
+	color: #FFF;
+	text-decoration: none;
+	display: block;
 }
 
 section{
@@ -19,35 +38,15 @@ article{
 	padding:0 10px;
 	margin: 20px 0;
 	border-left: 2px solid #444;
+	display: none;
 }
 
-h1,h2,h3{
-	line-height:1.2;
-	font-family: 'Share Tech Mono', monospace;
-}
-
-h1:hover a::after, article:hover h2::after{
-	content: '_';
-}
-
-header{
-	background: #444;
-	color: #FFF;
-	height: 50px;
-	max-width: 100%;
-	margin: 0;
-	padding: 0 10px;
-	border-bottom: 2px solid #088;
-}
-
-header h1 a{
-	color: #FFF;
-	text-decoration: none;
+.current{
 	display: block;
 }
 
-header h1{
-	margin: 0;
+div.menu{
+	display: none;
 }
 
 aside{
@@ -62,11 +61,11 @@ aside{
 	height: 100%;
 }
 
-nav{
-	max-width: 150px;
+div.menu{
+	width: 150px;
 }
 
-nav a{
+div.menu a{
 	display:block;
 	color: #FFF;
 	text-decoration: none;
@@ -74,18 +73,18 @@ nav a{
 	border-bottom: 1px solid #088;
 }
 
-nav a::before{
+div.menu a::before{
 	content: '§ ';
 	color: #444;
 }
 
-nav a:hover{
+div.menu a:hover{
 	color: #444;
 	background: #FFF;
 	border-radius: 5px;
 }
 
-nav a:hover::before{
+div.menu a:hover::before{
 	color: #088;
 }
 
@@ -104,6 +103,15 @@ footer a{
 
 footer a:hover{
 	color: #088;
+}
+
+h1,h2,h3{
+	line-height:1.2;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+h1:hover a::after, h2:hover::after{
+	content: '_';
 }
 
 p:hover::after{

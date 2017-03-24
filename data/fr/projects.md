@@ -1,6 +1,6 @@
-data.projects = {
-	nav:{fr:"Projets", en:"Projects"},
-	fr:`
+<article>
+<nav>Projets</nav>
+<data>
 ## Projets
 
 ******
@@ -44,35 +44,6 @@ Ce site est l’exemple de mes compétences en web. J’y utilise HTML5, CSS3 et
 \\[LaTeX\\] | jiltx
 --- | ---
 Sur le dépôt GitHub [jiltx](https://github.com/ribacq/jiltx), j’ai déposé un package que j’ai créé, _jipkg_ | Il s’agit simplement d’un raccourcis d’actions usuelles à effectuer à la création de tout document LaTeX. Il ajoute notamment des couleurs aux titres.
-`,
-en:`
-## Projects
+</data>
+</article>
 
-### C
-
-* ltl
-* chinese_checkers
-
-### Java
-
-* soon our spring semester project
-
-### Python
-
-* utaxc
-
-### Bash
-
-* bash-misc
-
-### Web technologies
-
-* this very website
-
-### LaTeX
-
-* jipkg
-* WMWT
-* Deẽreẽ grammar
-`
-};
