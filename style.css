@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css?family=Cantarell|Share+Tech+Mono');*/
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Share+Tech+Mono');
 
 /* big parts */
 body{
@@ -41,7 +41,7 @@ article{
 	display: none;
 }
 
-.current{
+article.current, div.menu.current{
 	display: block;
 }
 

@@ -1,45 +1,3 @@
-/*
-//content default vars
-var lang = "fr";
-var pages = ['bio', 'projects', 'perso'];
-data = {fr: {}, en: {}};
-var current = 'bio';
-
-//page structure
-var menu = $('nav div#datamenu');
-var content = $('article');
-
-//display functions
-function dispMenu() {
-	menu.empty();
-	for (i in pages) {
-		//menu.append('<a href="#' + pages[i] + '">' + data[lang][pages[i]].nav + '</a>');
-		menu.append('<a href="#' + pages[i] + '">' + i + '</a>');
-	}
-}
-dispMenu();
-
-function dispContent() {
-	content.html(markdown.toHTML(data[lang][current].data, 'Maruku'));
-}
-//dispContent();
-
-//menu links
-let linkFunc = function (e) {
-	$.get('data/' + lang + '/' + pages[i] + '.md', function (d) {
-		data[lang][pages[i]] = {
-			nav: d.firstChild.children[0].innerHTML,
-			data: d.firstChild.children[1].innerHTML
-		};
-		dispContent();
-		dispMenu();
-	});
-};
-for (name in data) {
-	$('a[href="#' + name + '"]').click(linkFunc);
-}
-//*/
-
 var lang = 'fr';
 
 //markdown setup
@@ -48,7 +6,6 @@ $('article').html(function () {
 });
 
 //menu links
-$('div.menu.' + lang).css('display', 'block');
 $('div.menu.' + lang + ' nav a').click(function (e) {
 	var tab = e.target.href.split('#');
 	var current = tab[tab.length - 1];
@@ -64,7 +21,7 @@ $('a[href="#translate"]').click(function () {
 
 	//remove current classes
 	currentArticle.removeClass('current');
-	$('div.menu').removeClass('current');
+	$('div.menu.' + lang).removeClass('current');
 
 	//switch language
 	lang = (lang === 'fr') ? 'en' : 'fr';
