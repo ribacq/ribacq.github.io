@@ -9,6 +9,7 @@ body{
 	font-size:18px;
 	color:#444;
 	font-family: Cantarell, sans-serif;
+	background: #DEE;
 }
 
 header{
@@ -28,6 +29,11 @@ header h1 a{
 	color: #FFF;
 	text-decoration: none;
 	display: block;
+}
+
+main{
+	display: flex;
+	flex-direction: row;
 }
 
 section{
@@ -54,6 +60,9 @@ aside{
 	left: 0;
 	top: 50px;
 	width: 150px;
+	/*flex-grow: 1;
+	flex-basis: 150px;*/
+	height: 100;
 	background: #444;
 	border-right: 2px solid #088;
 	color: #FFF;
