@@ -10,6 +10,7 @@ body{
 	color:#444;
 	font-family: Cantarell, sans-serif;
 	background: #DEE;
+	height: 100vh;
 }
 
 header{
@@ -31,11 +32,6 @@ header h1 a{
 	display: block;
 }
 
-main{
-	display: flex;
-	flex-direction: row;
-}
-
 section{
 	margin-left: 200px;
 }
@@ -51,17 +47,12 @@ article.current, div.menu.current{
 	display: block;
 }
 
-div.menu{
-	display: none;
-}
-
+/* aside */
 aside{
 	position: absolute;
 	left: 0;
 	top: 50px;
 	width: 150px;
-	/*flex-grow: 1;
-	flex-basis: 150px;*/
 	height: 100;
 	background: #444;
 	border-right: 2px solid #088;
@@ -70,11 +61,12 @@ aside{
 	height: 100%;
 }
 
-div.menu{
+aside > div.menu{
+	display: none;
 	width: 150px;
 }
 
-div.menu a{
+aside > div a{
 	display:block;
 	color: #FFF;
 	text-decoration: none;
@@ -82,38 +74,42 @@ div.menu a{
 	border-bottom: 1px solid #088;
 }
 
-div.menu a::before{
+aside a::before{
 	content: '§ ';
 	color: #444;
 }
 
-div.menu a:hover{
+aside > div a:hover, nav a.curMenu{
 	color: #444;
 	background: #FFF;
 	border-radius: 5px;
 }
 
-div.menu a:hover::before{
+aside > div a:hover::before, nav a.curMenu::before{
 	color: #088;
 }
 
-footer{
+a[href="#translate"] img{
+	height: 1em;
+}
+
+/* menu top arrow link */
+a[href="#top"]{
+	display: none;
 	position:fixed;
 	width: 150px;
 	bottom: 0;
-}
-
-footer a{
 	display: block;
 	color: #FFF;
 	padding: 5px;
 	text-decoration: none;
 }
 
-footer a:hover{
+a[href="#top"]:hover{
 	color: #088;
 }
 
+/* elements */
 h1,h2,h3{
 	line-height:1.2;
 	font-family: 'Share Tech Mono', monospace;
@@ -128,7 +124,7 @@ p:hover::after{
 	color: #088;
 }
 
-section a:link{
+a{
 	color: #088;
 	text-decoration: none;
 }

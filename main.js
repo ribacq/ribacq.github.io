@@ -6,9 +6,11 @@ $('article').html(function () {
 });
 
 //menu links
-$('div.menu.' + lang + ' nav a').click(function (e) {
+$('nav a').click(function (e) {
 	var tab = e.target.href.split('#');
 	var current = tab[tab.length - 1];
+	$('nav a').removeClass('curMenu');
+	$('nav a[href="#' + current + '"]').addClass('curMenu');
 	$('article.current.' + lang).removeClass('current');
 	$('article.' + current + '.' + lang).addClass('current');
 });
@@ -31,19 +33,22 @@ $('a[href="#translate"]').click(function () {
 	$('div.menu.' + lang).addClass('current');
 });
 
-//footer button animation
-$('footer a').click(function () {
+//top link animation
+$('a[href="#top"]').click(function () {
 	$('html, body').animate({
 		scrollTop: 0
 	});
 });
 
-//menu sticked to top
+//on window scroll
 $(window).scroll(function () {
+	//asides sticked to top
 	if ($(window).scrollTop() > 50) {
-		$('div.menu').css({'position': 'fixed', 'top': 0});
+		$('aside > div').css({'position': 'fixed', 'top': 0});
 	} else {
-		$('div.menu').css({'position': 'relative'});
+		$('aside > div').css({'position': 'relative'});
 	}
+
+	//top link appears on scroll
 });
 
