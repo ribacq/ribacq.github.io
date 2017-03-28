@@ -42,13 +42,6 @@ $('a[href="#top"]').click(function () {
 
 //on window scroll
 $(window).scroll(function () {
-	//asides sticked to top
-	if ($(window).scrollTop() > 50) {
-		$('aside > div').css({'position': 'fixed', 'top': 0});
-	} else {
-		$('aside > div').css({'position': 'relative'});
-	}
-
 	//top link appears on scroll
 });
 
