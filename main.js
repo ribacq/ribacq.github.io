@@ -40,8 +40,3 @@ $('a[href="#top"]').click(function () {
 	});
 });
 
-//on window scroll
-$(window).scroll(function () {
-	//top link appears on scroll
-});
-

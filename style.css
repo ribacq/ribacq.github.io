@@ -6,7 +6,6 @@ body{
 	padding: 0;
 	position: relative;
 	line-height:1.6;
-	font-size:18px;
 	color:#444;
 	font-family: Cantarell, sans-serif;
 	height: 100vh;
@@ -24,6 +23,8 @@ header{
 
 header h1{
 	margin: 0;
+	height: 40px;
+	padding: 5px;
 }
 
 header h1 a{
