@@ -21,13 +21,13 @@ header{
 	padding: 0 10px;
 }
 
-header h1{
+h1{
 	margin: 0;
 	height: 40px;
 	padding: 5px;
 }
 
-header h1 a{
+h1 a{
 	color: #FFF;
 	text-decoration: none;
 	display: block;
@@ -52,13 +52,18 @@ article.current, div.menu.current{
 /* aside */
 aside{
 	position: fixed;
-	top: 50px;
+	z-index: 0;
+	top: 0;
 	left: 0;
 	height: 100%;
 	width: 200px;
 	background: #444;
 	color: #FFF;
 	padding: 10px;
+}
+
+aside h1{
+	font-size: 24px;
 }
 
 aside > div.menu{
