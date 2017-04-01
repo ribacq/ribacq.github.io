@@ -16,15 +16,16 @@ header{
 	z-index: 10;
 	background: #444;
 	color: #FFF;
-	height: 50px;
+	height: 40px;
 	margin: 0;
-	padding: 0 10px;
+	padding: 5px;
 }
 
 h1{
-	margin: 0;
+	font-size: 24px;
 	height: 40px;
-	padding: 5px;
+	margin: 0;
+	padding: 0;
 }
 
 h1 a{
@@ -58,10 +59,6 @@ aside{
 	background: #444;
 	color: #FFF;
 	padding: 10px;
-}
-
-aside h1{
-	font-size: 24px;
 }
 
 aside > div.menu{
@@ -109,6 +106,50 @@ a[href="#top"]:hover{
 	color: #088;
 }
 
+/* cartes */
+div.cards{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+div.cards div.card{
+	position: relative;
+	flex: 0 0 300px;
+	height: 80px;
+	padding: 5px;
+	margin: 5px;
+	border-top: 2px solid #444;
+	border-left: 2px solid #444;
+	background: #ddd;
+}
+
+div.cards div.card .card-left{
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 20%;
+	margin: auto;
+}
+
+div.cards div.card .card-ct{
+	margin-left: 20%;
+}
+
+div.cards div.card .card-ct h3{
+	margin: 0;
+}
+
+/* stars */
+div.stars{
+	font-family: 'Share Tech Mono', monospace;
+	color: #dd0;
+	font-size: 32px;
+	height: 32px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #444;
+}
+
 /* elements */
 h1,h2,h3{
 	line-height:1.2;
@@ -136,8 +177,17 @@ article img{
 
 pre, code{
 	border-radius: 3px;
-	background: #DDD;
+	background: #ddd;
 	padding: 0 3px;
 	font-family: 'Share Tech Mono', monospace;
 }
+
+table{
+	margin: 1em;
+	border-collapse: collapse;
+}
+
+table tr{
+	border-bottom: 1px solid #444;
+} 
 

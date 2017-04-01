@@ -1,7 +1,7 @@
 var lang = 'fr';
 
 //markdown setup
-$('article').html(function () {
+$('article:not(.nomd)').html(function () {
 	return markdown.toHTML(this.innerHTML, 'Maruku');
 });
 
@@ -19,7 +19,7 @@ $('nav a').click(function (e) {
 $('a[href="#translate"]').click(function () {
 	//get current article class
 	var currentArticle = $('article.current');
-	var currentClass = currentArticle.attr('class').replace(lang, '').replace('current', '').trim();
+	var currentClass = currentArticle.attr('class').split(' ')[0];
 
 	//remove current classes
 	currentArticle.removeClass('current');
