@@ -91,12 +91,27 @@ a[href="#top"]{
 	bottom: 0;
 	width: 150px;
 	display: block;
-	color: #FFF;
+	color: #fff;
 	padding: 5px;
 	text-decoration: none;
 }
 
 a[href="#top"]:hover{
+	color: #088;
+}
+
+a[href="#next"]{
+	width: 150px;
+	display: block;
+	color: #fff;
+	padding: 5px;
+	text-decoration: none;
+	background: #444;
+	margin: 0 auto;
+	text-align: center;
+}
+
+a[href="#next"]:hover{
 	color: #088;
 }
 
