@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Share+Tech+Mono');
+
+/* big parts */
+body{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	line-height:1.6;
+	color:#444;
+	font-family: Cantarell, sans-serif;
+	height: 100vh;
+}
+
+header{
+	position: relative;
+	z-index: 10;
+	background: #444;
+	color: #FFF;
+	height: 40px;
+	margin: 0;
+	padding: 5px;
+}
+
+h1{
+	font-size: 24px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+h1 a{
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+}
+
+section{
+	margin-left: 230px;
+}
+
+/* aside */
+aside{
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 200px;
+	background: #444;
+	color: #FFF;
+	padding: 10px;
+}
+
+aside > div.menu{
+	display: none;
+}
+
+aside > div.menu.current{
+	display: block;
+}
+
+aside > div a{
+	display:block;
+	color: #FFF;
+	text-decoration: none;
+	padding: 5px;
+	border-bottom: 2px solid #088;
+}
+
+aside a::before{
+	content: '§ ';
+	color: #444;
+}
+
+aside > div a:hover, nav a.curMenu{
+	color: #444;
+	background: #FFF;
+}
+
+aside > div a:hover::before, nav a.curMenu::before{
+	color: #088;
+}
+
+a[href="#translate"] img{
+	height: 1em;
+}
+
+/* aside top arrow link */
+a[href="#top"]{
+	position:fixed;
+	bottom: 0;
+	width: 150px;
+	display: block;
+	color: #FFF;
+	padding: 5px;
+	text-decoration: none;
+}
+
+a[href="#top"]:hover{
+	color: #088;
+}
+
+/* cartes */
+div.cards{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div.cards div.card{
+	position: relative;
+	flex: 0 0 300px;
+	height: 80px;
+	padding: 5px;
+	margin: 5px;
+	border-top: 2px solid #444;
+	border-left: 2px solid #444;
+	background: #ddd;
+}
+
+div.cards div.card .card-left{
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 20%;
+	margin: auto;
+}
+
+div.cards div.card .card-ct{
+	margin-left: 20%;
+}
+
+div.cards div.card .card-ct h3{
+	margin: 0;
+}
+
+/* stars */
+div.stars{
+	font-family: 'Share Tech Mono', monospace;
+	color: #dd0;
+	font-size: 32px;
+	height: 24px;
+	width: 90px;
+	background: #444;
+	font-weight: bold;
+	line-height: 1;
+}
+
+/* elements */
+h1,h2,h3{
+	line-height:1.2;
+	font-family: 'Share Tech Mono', monospace;
+	clear: both;
+}
+
+h1:hover a::after, h2:hover::after{
+	content: '_';
+}
+
+p:hover::after{
+	content: '¶';
+	color: #088;
+}
+
+a{
+	color: #088;
+	text-decoration: none;
+}
+
+article img{
+	float: left;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+pre, code{
+	border-radius: 3px;
+	background: #ddd;
+	padding: 0 3px;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+table{
+	margin: 1em;
+	border-collapse: collapse;
+}
+
+table tr{
+	border-bottom: 1px solid #444;
+} 
+
