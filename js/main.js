@@ -28,11 +28,14 @@ function loadPage(pageName) {
 				loadPage(pages[pages.indexOf(pageName) + 1]);
 			});
 		}
-	}, 'text');
 
-	//update current in menu
-	$('nav a').removeClass('curMenu');
-	$('nav a[href="#' + pageName + '"]').addClass('curMenu');
+		//update current in menu
+		$('nav a').removeClass('curMenu');
+		$('nav a[href="#' + pageName + '"]').addClass('curMenu');
+
+		//scroll back to top
+		$('html, body').scrollTop(0);
+	}, 'text');
 }
 loadPage(homePage);
 
