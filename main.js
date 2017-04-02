@@ -1,3 +1,4 @@
+//set language variable
 var lang = 'fr';
 
 //markdown setup
@@ -11,8 +12,11 @@ $('nav a').click(function (e) {
 	var current = tab[tab.length - 1];
 	$('nav a').removeClass('curMenu');
 	$('nav a[href="#' + current + '"]').addClass('curMenu');
-	$('article.current.' + lang).removeClass('current');
-	$('article.' + current + '.' + lang).addClass('current');
+	var curArt = $('article.current.' + lang);
+	var nextArt = $('article.' + current + '.' + lang);
+	curArt.removeClass('current');
+	nextArt.addClass('current');
+	scrollTopToZero();
 });
 
 //translation
@@ -34,9 +38,11 @@ $('a[href="#translate"]').click(function () {
 });
 
 //top link animation
-$('a[href="#top"]').click(function () {
+$('a[href="#top"]').click(scrollTopToZero);
+
+function scrollTopToZero() {
 	$('html, body').animate({
 		scrollTop: 0
 	});
-});
+}
 

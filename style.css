@@ -155,6 +155,7 @@ div.stars{
 h1,h2,h3{
 	line-height:1.2;
 	font-family: 'Share Tech Mono', monospace;
+	clear: both;
 }
 
 h1:hover a::after, h2:hover::after{
@@ -172,6 +173,7 @@ a{
 }
 
 article img{
+	float: left;
 	max-width: 300px;
 	max-height: 300px;
 }
