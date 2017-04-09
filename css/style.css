@@ -15,6 +15,7 @@ header{
 	position: relative;
 	z-index: 10;
 	background: #444;
+	box-shadow: 0 0 5px #444;
 	color: #FFF;
 	height: 40px;
 	margin: 0;
@@ -47,6 +48,7 @@ aside{
 	height: 100%;
 	width: 200px;
 	background: #444;
+	box-shadow: 0 0 5px #444;
 	color: #FFF;
 	padding: 10px;
 }
@@ -127,8 +129,8 @@ div.cards div.card{
 	height: 80px;
 	padding: 5px;
 	margin: 5px;
-	border-top: 2px solid #444;
-	border-left: 2px solid #444;
+	border: 1px dashed #fff;
+	box-shadow: 0 0 5px #444;
 	background: #ddd;
 }
 
@@ -150,12 +152,14 @@ div.cards div.card .card-ct h3{
 
 /* stars */
 div.stars{
+	position: absolute;
+	top: 2px;
+	right: 2px;
 	font-family: 'Share Tech Mono', monospace;
-	color: #dd0;
+	color: #ff0;
+	text-shadow: 0 0 1px #444;
 	font-size: 32px;
 	height: 24px;
-	width: 90px;
-	background: #444;
 	font-weight: bold;
 	line-height: 1;
 }
