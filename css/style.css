@@ -22,6 +22,34 @@ header{
 	padding: 5px;
 }
 
+footer{
+	margin-left: 220px;
+	background: #fff;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+footer div.footer-part{
+	flex: 0 0 300px;
+	border: 1px dashed #fff;
+	box-shadow: 0 0 5px #444;
+	background: #ddd;
+	padding: 5px;
+	margin: 5px;
+}
+
+footer li{
+	list-style: none;
+}
+
+footer a{
+	display: block;
+}
+
+footer li:hover{
+	list-style: disc;
+}
+
 h1{
 	font-size: 24px;
 	height: 40px;
@@ -53,11 +81,11 @@ aside{
 	padding: 10px;
 }
 
-aside > div.menu{
+.menu{
 	display: none;
 }
 
-aside > div.menu.current{
+.menu.current{
 	display: block;
 }
 
@@ -69,18 +97,18 @@ aside > div a{
 	border-bottom: 2px solid #088;
 }
 
-aside > div a:hover, nav a.curMenu{
+aside > div a:hover, aside nav a.curMenu{
 	color: #444;
 	background: #FFF;
 }
 
-nav a.curMenu::before{
-	content: '» ';
+aside nav a.curMenu::before{
+	content: '> ';
 	color: #088;
 	font-weight: bold;
 }
 
-a[href="#translate"] img{
+a[href^="#translate"] img{
 	height: 1em;
 }
 
@@ -134,24 +162,18 @@ div.cards div.card{
 }
 
 div.cards div.card .card-left{
-	display: block;
-	position: absolute;
-	left: 0;
+	float: left;
 	max-width: 20%;
 	height: 80px;
-	margin: auto;
 }
 
-div.cards div.card .card-ct{
-	margin-left: 20%;
-}
-
-div.cards div.card .card-ct h3{
+div.cards div.card div.card-ct h3{
+	clear: none;
 	margin: 0;
 }
 
 /* stars */
-div.stars{
+div.cards div.card div.stars{
 	position: absolute;
 	top: 2px;
 	right: 2px;
@@ -177,9 +199,9 @@ a{
 }
 
 article img{
-	float: left;
-	max-width: 200px;
-	max-height: 200px;
+	display: block;
+	max-width: 300px;
+	max-height: 300px;
 	margin: 5px;
 }
 

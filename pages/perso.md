@@ -7,3 +7,9 @@ _When Marnie Was There_ est un roman pour enfant anglais de Joan G. Robinson, pu
 ## La grammaire du Deẽreẽ
 </article>
 
+<article class="perso en">
+## Personal projects
+### WMWT
+### Deẽreẽ
+</article>
+

@@ -1,4 +1,5 @@
 //set default language
+let langs = ['fr', 'en'];
 let lang = 'fr';
 
 //list of pages
@@ -11,16 +12,19 @@ let mdConverter = new showdown.Converter();
 function loadPage(pageName) {
 	//get page format and location
 	let pageFormat = (noMdPages.indexOf(pageName) === -1) ? 'md' : 'html';
-	let uri = 'pages/' + lang + '/' + pageName + '.' + pageFormat;
+	let uri = 'pages/' + pageName + '.' + pageFormat;
 	let section = $('section');
 	
 	$.get(uri, {}, function (content) {
 		//display and parse markdown if necessary
 		section.html(content);
 		if (pageFormat === 'md') {
-			let article = $('article.' + lang + '.' + pageName);
-			article.html(mdConverter.makeHtml(article.html()));
+			let articles = $('article.' + pageName);
+			for (i in articles) {
+				articles[i].innerHTML = mdConverter.makeHtml(articles[i].innerHTML);
+			}
 		}
+		setLang(lang);
 
 		//next page link
 		if (pages.indexOf(pageName) !== (pages.length - 1)) {
@@ -42,27 +46,21 @@ loadPage(homePage);
 
 //menu links
 $('nav a').click(function (e) {
-	let tab = e.target.href.split('#');
-	let current = tab[tab.length - 1];
-	loadPage(current);
+	loadPage($(this).attr('href').substr(1));
 });
 
 //translation
-$('a[href="#translate"]').click(function () {
-	//get current article class
-	let currentArticle = $('article');
-	let currentClass = currentArticle.attr('class').split(' ')[0];
+function setLang(lang) {
+	for (i in langs) {
+		$('.' + langs[i]).hide();
+	}
+	$('.' + lang).show();
+}
 
-	//remove current classes
-	$('div.menu.' + lang).removeClass('current');
-
-	//switch language
-	lang = (lang === 'fr') ? 'en' : 'fr';
-
-	//display translation
-	loadPage(currentClass);
-	$('div.menu.' + lang).addClass('current');
+$('a[href|="#translate"]').click(function (){
+	setLang($(this).attr('href').split('-')[1]);
 });
+setLang(lang);
 
 //top link animation
 $('a[href="#top"]').click(function () {
