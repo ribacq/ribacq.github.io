@@ -16,7 +16,7 @@ header{
 	z-index: 10;
 	background: #444;
 	box-shadow: 0 0 5px #444;
-	color: #FFF;
+	color: #fff;
 	height: 40px;
 	margin: 0;
 	padding: 5px;
@@ -30,13 +30,13 @@ h1{
 }
 
 h1 a{
-	color: #FFF;
+	color: #fff;
 	text-decoration: none;
 	display: block;
 }
 
 section{
-	margin-left: 230px;
+	margin: 0 10px 0 230px;
 }
 
 /* aside */
@@ -49,7 +49,7 @@ aside{
 	width: 200px;
 	background: #444;
 	box-shadow: 0 0 5px #444;
-	color: #FFF;
+	color: #fff;
 	padding: 10px;
 }
 
@@ -69,18 +69,15 @@ aside > div a{
 	border-bottom: 2px solid #088;
 }
 
-aside a::before{
-	content: '§ ';
-	color: #444;
-}
-
 aside > div a:hover, nav a.curMenu{
 	color: #444;
 	background: #FFF;
 }
 
-aside > div a:hover::before, nav a.curMenu::before{
+nav a.curMenu::before{
+	content: '» ';
 	color: #088;
+	font-weight: bold;
 }
 
 a[href="#translate"] img{
@@ -102,6 +99,7 @@ a[href="#top"]:hover{
 	color: #088;
 }
 
+/* next page button */
 a[href="#next"]{
 	width: 150px;
 	display: block;
@@ -109,7 +107,8 @@ a[href="#next"]{
 	padding: 5px;
 	text-decoration: none;
 	background: #444;
-	margin: 0 auto;
+	box-shadow: 0 0 5px #444;
+	margin: 10px auto;
 	text-align: center;
 }
 
@@ -117,7 +116,7 @@ a[href="#next"]:hover{
 	color: #088;
 }
 
-/* cartes */
+/* cards */
 div.cards{
 	display: flex;
 	flex-wrap: wrap;
@@ -138,7 +137,8 @@ div.cards div.card .card-left{
 	display: block;
 	position: absolute;
 	left: 0;
-	width: 20%;
+	max-width: 20%;
+	height: 80px;
 	margin: auto;
 }
 
@@ -168,15 +168,7 @@ h1,h2,h3{
 	line-height:1.2;
 	font-family: 'Share Tech Mono', monospace;
 	clear: both;
-}
-
-h1:hover a::after, h2:hover::after{
-	content: '_';
-}
-
-p:hover::after{
-	content: '¶';
-	color: #088;
+	width: 100%;
 }
 
 a{
@@ -188,6 +180,7 @@ article img{
 	float: left;
 	max-width: 200px;
 	max-height: 200px;
+	margin: 5px;
 }
 
 pre, code{

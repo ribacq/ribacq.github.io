@@ -1,24 +1,25 @@
 //set default language
-var lang = 'fr';
+let lang = 'fr';
 
 //list of pages
-var pages = ['bio', 'skills', 'projects', 'perso', 'contact'];
-var noMdPages = ['skills'];
-var homePage = 'bio';
+let pages = ['bio', 'skills', 'projects', 'perso', 'contact'];
+let noMdPages = ['skills'];
+let homePage = 'bio';
 
 //load pages content
+let mdConverter = new showdown.Converter();
 function loadPage(pageName) {
 	//get page format and location
-	var pageFormat = (noMdPages.indexOf(pageName) === -1) ? 'md' : 'html';
-	var uri = 'pages/' + lang + '/' + pageName + '.' + pageFormat;
-	var section = $('section');
+	let pageFormat = (noMdPages.indexOf(pageName) === -1) ? 'md' : 'html';
+	let uri = 'pages/' + lang + '/' + pageName + '.' + pageFormat;
+	let section = $('section');
 	
 	$.get(uri, {}, function (content) {
 		//display and parse markdown if necessary
 		section.html(content);
 		if (pageFormat === 'md') {
-			var article = $('article.' + lang + '.' + pageName);
-			article.html(markdown.toHTML(article.html(), 'Maruku'));
+			let article = $('article.' + lang + '.' + pageName);
+			article.html(mdConverter.makeHtml(article.html()));
 		}
 
 		//next page link
@@ -41,16 +42,16 @@ loadPage(homePage);
 
 //menu links
 $('nav a').click(function (e) {
-	var tab = e.target.href.split('#');
-	var current = tab[tab.length - 1];
+	let tab = e.target.href.split('#');
+	let current = tab[tab.length - 1];
 	loadPage(current);
 });
 
 //translation
 $('a[href="#translate"]').click(function () {
 	//get current article class
-	var currentArticle = $('article');
-	var currentClass = currentArticle.attr('class').split(' ')[0];
+	let currentArticle = $('article');
+	let currentClass = currentArticle.attr('class').split(' ')[0];
 
 	//remove current classes
 	$('div.menu.' + lang).removeClass('current');
