@@ -3,7 +3,7 @@ let langs = ['fr', 'en'];
 let lang = 'fr';
 
 //list of pages
-let pages = ['bio', 'skills', 'projects', 'perso', 'contact'];
+let pages = ['bio', 'skills', 'studies', 'projects', 'perso'];
 let noMdPages = ['skills'];
 let homePage = 'bio';
 
@@ -24,11 +24,10 @@ function loadPage(pageName) {
 				articles[i].innerHTML = mdConverter.makeHtml(articles[i].innerHTML);
 			}
 		}
-		setLang(lang);
 
 		//next page link
 		if (pages.indexOf(pageName) !== (pages.length - 1)) {
-			section.append('<a href="#next">' + ((lang === 'fr') ? 'page suivante' : 'next page') + ' &rarr;</a>');
+			section.append('<a href="#next"><span class="fr">page suivante</span><span class="en">next page</span> &rarr;</a>');
 			$('a[href="#next"]').click(function () {
 				loadPage(pages[pages.indexOf(pageName) + 1]);
 			});
@@ -40,6 +39,9 @@ function loadPage(pageName) {
 
 		//scroll back to top
 		$('html, body').scrollTop(0);
+
+		//display current lang only
+		setLang(lang);
 	}, 'text');
 }
 loadPage(homePage);
@@ -58,7 +60,8 @@ function setLang(lang) {
 }
 
 $('a[href|="#translate"]').click(function (){
-	setLang($(this).attr('href').split('-')[1]);
+	lang = $(this).attr('href').split('-')[1];
+	setLang(lang);
 });
 setLang(lang);
 
