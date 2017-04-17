@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cantarell|Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Nova+Mono');
 
 /* big parts */
 body{
@@ -7,7 +7,8 @@ body{
 	position: relative;
 	line-height:1.6;
 	font-size: 16px;
-	color:#444;
+	color:#333;
+	background: #fff;
 	font-family: Cantarell, sans-serif;
 	height: 100vh;
 }
@@ -15,13 +16,14 @@ body{
 header{
 	position: relative;
 	z-index: 10;
-	background: #444;
-	box-shadow: 0 0 5px #444;
+	background: #333;
+	box-shadow: 0 0 5px #333;
 	color: #fff;
 	margin: 0;
+	padding: 0 10px;
 }
 
-h1, aside h2{
+h1, aside h2, footer h2{
 	height: 32px;
 	font-size: 24px;
 	padding: 5px;
@@ -34,9 +36,14 @@ h1 a{
 	display: block;
 }
 
+h1 a:hover::after{
+	content: ' //\1f60e\1f638\1f631';
+	font-weight: normal;
+	color: #066;
+}
+
 footer{
 	margin-left: 230px;
-	background: #fff;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -44,22 +51,19 @@ footer{
 footer div.footer-part{
 	flex: 0 0 300px;
 	border: 1px dashed #fff;
-	box-shadow: 0 0 5px #444;
-	background: #ddd;
+	box-shadow: 0 0 5px #333;
+	background: #eee;
 	padding: 5px;
 	margin: 5px;
 }
 
-footer li{
-	list-style: none;
+footer ul{
+	padding: 0;
+	margin: 0;
 }
 
-footer a{
+footer li, footer a{
 	display: block;
-}
-
-footer li:hover{
-	list-style: disc;
 }
 
 section{
@@ -68,14 +72,14 @@ section{
 
 /* aside */
 aside{
-	position: fixed;
 	z-index: 0;
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 200px;
-	background: #444;
-	box-shadow: 0 0 5px #444;
+	background: #333;
+	box-shadow: 0 0 5px #333;
 	color: #fff;
 	padding: 0 10px;
 }
@@ -93,17 +97,17 @@ aside > div a{
 	color: #FFF;
 	text-decoration: none;
 	padding: 5px;
-	border-bottom: 2px solid #088;
+	border-bottom: 2px solid #066;
 }
 
 aside > div a:hover, aside nav a.curMenu{
-	color: #444;
+	color: #333;
 	background: #FFF;
 }
 
 aside nav a.curMenu::before{
 	content: '> ';
-	color: #088;
+	color: #066;
 	font-weight: bold;
 }
 
@@ -112,7 +116,7 @@ a[href^="#translate"] img{
 }
 
 /* aside top arrow link */
-a[href="#top"]{
+aside a[href="#top"]{
 	position:fixed;
 	bottom: 0;
 	width: 150px;
@@ -123,7 +127,7 @@ a[href="#top"]{
 }
 
 a[href="#top"]:hover{
-	color: #088;
+	color: #066;
 }
 
 /* next page button */
@@ -133,14 +137,15 @@ a[href="#next"]{
 	color: #fff;
 	padding: 5px;
 	text-decoration: none;
-	background: #444;
-	box-shadow: 0 0 5px #444;
+	background: #333;
+	box-shadow: 0 0 5px #333;
+	border-radius: 2px;
 	margin: 10px auto;
 	text-align: center;
 }
 
 a[href="#next"]:hover{
-	color: #088;
+	color: #066;
 }
 
 /* cards */
@@ -152,12 +157,11 @@ div.cards{
 div.cards div.card{
 	position: relative;
 	flex: 0 0 300px;
-	height: 80px;
 	padding: 5px;
 	margin: 5px;
 	border: 1px dashed #fff;
-	box-shadow: 0 0 5px #444;
-	background: #ddd;
+	box-shadow: 0 0 5px #333;
+	background: #eee;
 }
 
 div.cards div.card .card-left{
@@ -176,9 +180,9 @@ div.cards div.card div.stars{
 	position: absolute;
 	top: 2px;
 	right: 2px;
-	font-family: 'Share Tech Mono', monospace;
+	font-family: 'Nova Mono', monospace;
 	color: #ff0;
-	text-shadow: 0 0 1px #444;
+	text-shadow: 0 0 1px #333;
 	font-size: 32px;
 	font-weight: bold;
 	line-height: 1;
@@ -187,27 +191,35 @@ div.cards div.card div.stars{
 /* elements */
 h1, h2, h3{
 	line-height:1.2;
-	font-family: 'Share Tech Mono', monospace;
+	font-family: 'Nova Mono', monospace;
 	clear: both;
 }
 
+article h2:before{
+	content: '\2022 ';
+}
+
 a{
-	color: #088;
+	color: #066;
 	text-decoration: none;
 }
 
 article img{
-	display: block;
+	float: left;
 	max-width: 300px;
 	max-height: 300px;
-	margin: 5px;
+	margin: 10px;
+}
+
+a img:hover{
+	box-shadow: 5px 5px 0 #066;
 }
 
 pre, code{
-	border-radius: 3px;
-	background: #ddd;
+	border-radius: 2px;
+	background: #eee;
 	padding: 0 3px;
-	font-family: 'Share Tech Mono', monospace;
+	font-family: 'Nova Mono', monospace;
 }
 
 table{
@@ -216,6 +228,6 @@ table{
 }
 
 table tr{
-	border-bottom: 1px solid #444;
+	border-bottom: 1px solid #333;
 } 
 
