@@ -14,7 +14,8 @@
 \usepackage[english]{babel}
 
 %% Adjust the page margins
-\usepackage[scale=0.8]{geometry}
+\usepackage[scale=0.8, right=1.5cm, top=1.5cm, left=1.5cm, bottom=1.5cm]{geometry}
+\recomputelengths
 
 %% Personal data
 \firstname{Quentin}
@@ -25,25 +26,32 @@
 \address{6a venelle des 3 avocats}{22300 Lannion, France}
 \phone[mobile]{+33~6~82~95~54~58}
 \email{ribac.quentin@gmail.com}
-\social[github]{https://github.com/ribacq}
-\extrainfo{21 years old (born October 1995)}
+\social[github]{ribacq}
+\extrainfo{22 years old (born October 1995)}
 %\photo[64pt][0.4pt]{photo_cv.jpg} %facultative
 
 %%------------------------------------------------------------------------------
 %% Content
 %%------------------------------------------------------------------------------
+%\cventry{date}{title}{company}{Description}{?}{place}
 \begin{document}
 \makecvtitle
 
 \section{Computer Skills}
-\cvdoubleitem{Languages}{C, C++, Java, Python}{Conception}{UML}
-\cvdoubleitem{Web}{HTML5, CSS3, PHP7, JavaScript, PostgreSQL, httpd}{Documents}{\LaTeX, Libre Office}
+\cvdoubleitem{Languages}{C, C++, Java, Python, Go}{Conception}{UML}
+\cvdoubleitem{Web}{HTML5, CSS3, PHP7, JavaScript (NodeJS, Meteor), PostgreSQL, httpd}{Documents}{\LaTeX (made my own wrapper package), Libre Office}
 \cvdoubleitem{GNU/Linux}{Fedora, Bash, VIM, dwm}{Keyboard}{BÉPO layout}
 
 \section{Studies}
-\cventry{2016—2018}{Two-year Computer Science university degree (French DUT Informatique)}{2\textsuperscript{nd} year}{Languages (C, OOC Java, Python), Web (HTML, CSS, PHP, JS), Project Management, Communication, Professional English}{}{Lannion, Britanny, France}
+\cventry{2016—2018}{Two-year Computer Science university degree (French DUT Informatique)}{2\textsuperscript{nd} year}{Languages (C, OOP Java, Python), Web (HTML, CSS, PHP, JS), Project Management, Communication, Professional English}{}{Lannion, Britanny, France}
 \cventry{2103—2016}{Engineering school preparatory cycle}{138 ECTS}{University of Technology Compiègne (UTC)}{Computer Science, English language, Mathematics, Mechanics}{Compiègne, Picardy, France}
-\cventry{2013}{French equivalent to GCSE A-level}{With Distinctions}{Computer Science, Math, Physics, English language}{}{Châlons-en-Champagne, Champagne-Ardenne, France}
+%\cventry{2013}{French equivalent to GCSE A-level}{With Distinctions}{Computer Science, Math, Physics, English language}{}{Châlons-en-Champagne, Champagne-Ardenne, France}
+
+\section{Projects and Events}
+\cvitem{Ongoing}{\texttt{sta}: text-based game written in Go}
+\cventry{2017, March, recently updated}{Porfolio}{University project}{A simple static website project written in HTML, CSS and JS with JQuery, using Markdown for formatting}{}{\url{https://ribacq.github.io}}
+\cventry{2017, May 19th \& 20th}{Hackathon}{Inter-universitary event}{24hrs. dedicated to 8hrs AI, 8hrs web, 8hrs security, team of 6}{ranked 9 of 30 teams}{Calais, Northern France}
+\cventry{2017, March 25th \& 26th}{Hackathon}{Enssat engineering school}{Design and development of an Android app in 24 hours, team of 5, Geolocation \& chat}{Ranked 3rd of 10 teams}{Lannion, Brittany, France}
 
 \section{Work Experience}
 \cventry{2015, 3 weeks}{Summer job, quality control}{Ecolab Production France SAS}{Control documents’ filling by workers, data input, analysis and summary to the responsibles}{}{Châlons-en-Champagne, Marne, France}
@@ -55,8 +63,8 @@
 \cvitem{Spoken}{Conversational level, ability to watch movies, attend to and give technical presentations}
 
 \section{Interests \& Miscellany}
-\cvitem{Linguistics}{self-taught notions of theoretical grammar, syntax, orthography, creation of a constructed language}
 \cvitem{Litterary translation}{\emph{When Marnie Was There}, by British author Joan Robinson, translated from English into French as a personal project}
+\cvitem{Linguistics}{self-taught notions of theoretical grammar, syntax, orthography, creation of a constructed language}
 \cvdoubleitem{GNU/Linux}{user since 2010}{C}{small games and tools made with \texttt{ncurses.h}}
 \cvdoubleitem{Favorite authors}{M. Proust, J. Gott, J.R.R. Tolkien, T. Pratchett}{Choir singing}{Bass choir-singer since 2015}
 
