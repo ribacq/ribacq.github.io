@@ -4,7 +4,7 @@
 Utilisateur de GNU/Linux depuis que j’ai 14 ans, je suis aujourd’hui un utilisateur avancé de ce
 système d’exploitation et passionné de programmation.
 
-Je suis actuellement étudiant en **première année de DUT Informatique**
+Je suis actuellement étudiant en **deuxième année de DUT Informatique**
 ([programme](media/ppn-dut-informatique-2013.pdf)) à l’[IUT de Lannion](http://www.iut-lannion.fr)
 (Côtes d’Armor), et compte poursuivre après ce diplôme des études d’ingénieur en informatique.
 
@@ -24,8 +24,8 @@ surtout, d’expérience.
 GNU/Linux user since I am 14, I today am an advanced user of this operating system, and passioned
 with programming.
 
-I am currently a student in **first year of a « DUT Informatique »**
-([curriculum](media/ppn-dut-informatique-2013.pdf)), a two-year Computing Sciences diploma, at the
+I am currently a student in **second year of a « DUT Informatique »**
+([curriculum](media/ppn-dut-informatique-2013.pdf)), a two-year Computing Sciences degree, at the
 [IUT of Lannion](http://www.iut-lannion.fr) (Brittany), and intend to continue with my studies into
 a three-year engineering school afterwards.
 
