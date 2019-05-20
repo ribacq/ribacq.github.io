@@ -1,7 +1,7 @@
 <article class="studies fr">
 ## Formation
 
-### Aujourd’hui : IUT de Lannion
+### Dernier établissement : IUT de Lannion
 L’[IUT de Lannion](http://www.iut-lannion.fr) propose une formation pratique et théorique en
 informatique d’aujourd’hui. Son [programme officiel](media/ppn-dut-informatique-2013.pdf) comprend :
 
@@ -24,8 +24,8 @@ informatique d’aujourd’hui. Son [programme officiel](media/ppn-dut-informati
 <article class="studies en">
 ## Studies
 
-### Currently: IUT of Lannion
-The [IUT of Lannion](http://www.iut-lannion.fr) (Brittany) offers me a practical and theoretical
+### Latest university: IUT of Lannion
+The [IUT of Lannion](http://www.iut-lannion.fr) (Brittany) offered me a practical and theoretical
 curriculum covering today’s computing sciences. Its
 [official curriculum](media/ppn-dut-informatique-2013.pdf) includes:
 
